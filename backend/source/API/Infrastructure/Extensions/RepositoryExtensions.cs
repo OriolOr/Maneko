@@ -8,7 +8,7 @@ namespace OriolOr.Maneko.Infrastructure.Extensions
     {
         public static IServiceCollection AddRepositoryServices(this IServiceCollection services)
         {
-            services.AddSingleton<IAccountDataRepository, AccountDataRepository>()
+            services.AddSingleton<IBalanceRepository, BalanceRepository>()
                     .AddSingleton<IUserDataRepository, UserDataRepository>();
             return services;
         }

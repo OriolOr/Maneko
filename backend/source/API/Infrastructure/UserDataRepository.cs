@@ -2,8 +2,8 @@
 using Newtonsoft.Json;
 using OriolOr.Maneko.API.Domain.IdentityManagement;
 using OriolOr.Maneko.API.Infrastructure.Interfaces;
-using System.Collections.ObjectModel;
 using OriolOr.Maneko.API.Properties;
+using System.Collections.ObjectModel;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace OriolOr.Maneko.API.Infrastructure

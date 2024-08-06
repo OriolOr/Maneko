@@ -16,8 +16,3 @@ const Balance:React.FC<BalanceProps> = (props) => {
 }
 
 export default Balance;
-
-
-
-
-

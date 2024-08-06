@@ -4,9 +4,10 @@ using System.Collections.ObjectModel;
 
 namespace OriolOr.Maneko.API.Service.Interfaces
 {
-    public interface IAccountService
+    public interface IBalanceService
     {
-        public double GetCurrentBalanceFromDb();
-        public Collection<YearBalance> GetYearBalanceFromDb();
+        public void AddMonthBalanceToDb(MonthBalance monthBalance);
+
+        public bool ValidateMonth(string month);
     }
 }

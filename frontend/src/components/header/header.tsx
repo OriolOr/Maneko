@@ -8,7 +8,7 @@ export const Header:React.FC = () => {
         <div className = "headerContainer">
             <div className = "headerLogo">
             <img src={logo} alt="Logo"  width="32" height="32" />
-                MANEKO
+            <span>MANEKO</span>
             </div>
             <div className = "headerRow">
                 <Link to= "/main"><div className = "headerElement">Ballance</div></Link>

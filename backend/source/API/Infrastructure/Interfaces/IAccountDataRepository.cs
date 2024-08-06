@@ -11,5 +11,6 @@ namespace OriolOr.Maneko.API.Infrastructure.Interfaces
         public void LoadAccountData(IMongoDatabase database, UserCredentials userCredentials);
         public double GetAccountCurrentBalance(IMongoDatabase database);
         public Collection<YearBalance> GetYearBalance(IMongoDatabase database);
+        public void AddMonthBalance(IMongoDatabase database, MonthBalance monthBalance);
     }
 }

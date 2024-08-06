@@ -13,10 +13,10 @@ namespace OriolOr.Maneko.API.Infrastructure
             DataBase = MongoClient.GetDatabase("ManekoDataBase");
     
             UserDataRepository userDataRepository = new UserDataRepository();
-            AccountDataRepository accountDataRepository = new AccountDataRepository();
+            BalanceRepository balanceRepository = new BalanceRepository();
             try
             {
-                InitializeMongoDbCollection(DataBase, accountDataRepository.CollectionName);
+                InitializeMongoDbCollection(DataBase, balanceRepository.CollectionName);
                 InitializeMongoDbCollection(DataBase, userDataRepository.CollectionName);
 
                 userDataRepository.LoadUserData(DataBase);

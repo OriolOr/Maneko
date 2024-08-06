@@ -13,12 +13,10 @@ namespace OriolOr.Maneko.API.Service
     public class UserCredentialsService : IUserCredentialsService
     {
         public IUserDataRepository UserDataRepository; 
-        public IAccountDataRepository AccountDataRepository;
 
-        public UserCredentialsService(IUserDataRepository userDataRepository, IAccountDataRepository accountDataRepository)
+        public UserCredentialsService(IUserDataRepository userDataRepository)
         {
             this.UserDataRepository = userDataRepository;
-            this.AccountDataRepository = accountDataRepository;
         }
 
         public bool Authenticate(UserCredentials userCredentials)
@@ -30,7 +28,6 @@ namespace OriolOr.Maneko.API.Service
                 var passwordEncoded = this.UserDataRepository.GetPasswordEncoded(userCredentials.UserName);
                 if (passwordEncoded == this.EncodeMD5HashPassword(userCredentials.Password))
                 {
-                    AccountDataRepository.LoadAccountData(MongoDbConfigurator.DataBase, userCredentials);
                     loginSucced = true;
                 }
                 else loginSucced = false;
